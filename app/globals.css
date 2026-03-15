@@ -30,7 +30,7 @@ body {
     radial-gradient(circle at top, rgba(248, 95, 102, 0.35), transparent 34%),
     linear-gradient(180deg, #151519 0%, #1b1618 42%, #12141d 100%);
   color: var(--ink);
-  font-family: var(--font-body), "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
 }
 
 a {
@@ -220,7 +220,7 @@ a {
 .feature-card h3,
 .footer h2,
 .ticket-banner h2 {
-  font-family: var(--font-display), "Arial Narrow", sans-serif;
+  font-family: "Avenir Next Condensed", "Arial Narrow", sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -560,7 +560,7 @@ a {
   border-radius: 1rem;
   background: rgba(248, 240, 215, 0.88);
   color: #c34e29;
-  font-family: var(--font-display), "Arial Narrow", sans-serif;
+  font-family: "Avenir Next Condensed", "Arial Narrow", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
