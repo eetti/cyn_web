@@ -1,200 +1,226 @@
-const menuIcon = "https://www.figma.com/api/mcp/asset/4f714d3c-eba4-4e12-bbe5-5150ad2b7b08";
-const heroTexture =
-  "https://www.figma.com/api/mcp/asset/653cb9b5-52af-4b62-ae95-f8dacc1bec7b";
-const serviceTexture =
-  "https://www.figma.com/api/mcp/asset/0dd1539d-b6c4-43fe-b80f-62295e378eff";
-const floralTexture =
-  "https://www.figma.com/api/mcp/asset/7b3215f0-251e-4072-96eb-1e5e4dbc4c93";
-const footerTexture =
-  "https://www.figma.com/api/mcp/asset/295db533-60ca-4b0c-9e03-809b6c81049e";
-const footerPanelTexture =
-  "https://www.figma.com/api/mcp/asset/12233db4-6ed8-4cce-ad36-8a4f9fd752e9";
-const instagramIcon =
-  "https://www.figma.com/api/mcp/asset/e224dc84-3aa9-495f-9100-4c7e3e233064";
-const facebookIcon =
-  "https://www.figma.com/api/mcp/asset/6172051e-0351-4d6f-81bc-ea52fc8469b5";
-const youtubeIcon =
-  "https://www.figma.com/api/mcp/asset/d47a6fd6-4b89-45a7-b1f6-ffd22284330c";
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Giving", href: "#giving" },
+  { label: "Ministries", href: "#ministries" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#footer" },
+];
 
-const navLinks = ["About", "Location", "Get Involved"];
-const serviceTimes = ["8:00AM", "9:30AM", "11:30AM"];
-
-const footerColumns = [
+const storyCards = [
   {
-    title: "About",
-    links: ["Beliefs", "Values", "Pastors"],
+    size: "small",
+    eyebrow: "Our Vision",
+    title: "Reach the nations of the world with the gospel through church planting.",
+    meta: "Matthew 28:18-20",
+    copy: "A place where everyone can worship, grow, and be sent.",
+    image: "https://www.figma.com/api/mcp/asset/796aefa3-cc24-44b1-90fe-6baa211cb713",
   },
   {
-    title: "Media",
-    links: ["Sermons", "App"],
+    size: "large",
+    eyebrow: "Our Mission",
+    title: "Raising Disciples of Jesus Christ",
+    meta: "Winning the lost. Consolidating believers. Empowering people.",
+    copy:
+      "All Nations Full Gospel Church is a caring global ministry of believers, raising disciples of Jesus Christ and helping people reach their God-given potential.",
+    image: "https://www.figma.com/api/mcp/asset/b1ef1a31-4cd2-4686-8988-85c11226ac4f",
   },
   {
-    title: "Ministries",
-    links: ["Small Groups", "Serving Teams", "Kids", "Teens"],
+    size: "large",
+    eyebrow: "Core Church Focus",
+    title: "Pray. Learn. Serve. Join Us.",
+    meta: "Daily morning prayers, Friday night encounters, Bible studies, and practical service.",
+    copy:
+      "Members serve in music, ushering, media, children's ministry, and hospitality while the whole church grows together in the Word.",
+    image: "https://www.figma.com/api/mcp/asset/3cfd2eb0-20f4-45b3-9e61-0fc39f174c3e",
   },
   {
-    title: "More",
-    links: ["Internships", "Events", "Contact"],
+    size: "small",
+    eyebrow: "Latest Message And Event",
+    title: "Enlargement Through Service II",
+    meta: "Soaring With The Spirit · January 1 - January 12",
+    copy:
+      "Stream sermons online and join the twelve-day prayer program focused on spiritual renewal and direction.",
+    image: "https://www.figma.com/api/mcp/asset/646a71bc-2f4c-4343-af59-48cb10c69d97",
   },
 ];
 
-const footerUtilityLinks = ["Sermons", "About", "Locations", "Get Involved", "Giving"];
+const weeklyRhythms = [
+  {
+    day: "Wednesday",
+    title: "Bible Study",
+    detail:
+      "6:30-8:30 PM · Join Bible studies, teachings, and messages that strengthen faith and equip believers.",
+    image: "https://www.figma.com/api/mcp/asset/658559fb-d446-4f7a-bc00-6086006f2800",
+  },
+  {
+    day: "Friday",
+    title: "Night Prayers",
+    detail:
+      "9:00 PM · Gather for Friday night encounters and monthly prayer sessions as a house of prayer for all nations.",
+    image: "https://www.figma.com/api/mcp/asset/ef8b9a4d-809c-4200-b53b-beec7d98fbf6",
+  },
+  {
+    day: "Sunday",
+    title: "Celebration + Connect Service",
+    detail:
+      "9:00-11:00 AM and 11:30 AM-1:30 PM · A spiritual family where everyone feels loved, welcomed, and accepted.",
+    image: "https://www.figma.com/api/mcp/asset/4d7ec4c1-1dc5-447f-8ea7-bcf545e9fdbd",
+  },
+  {
+    day: "Sunday",
+    title: "Evening Service + Church Planting Vision",
+    detail:
+      "6:30-8:30 PM · Worship, leadership training, and a mandate to keep expanding through new churches globally.",
+    image: "https://www.figma.com/api/mcp/asset/a12440a9-1861-45c1-84e5-8e3503a0f943",
+  },
+];
+
+const ministryColumns = [
+  {
+    title: "Ways To Give",
+    links: ["Pushpay App", "Online Giving", "Church Website Giving Link"],
+  },
+  {
+    title: "Main Ministries",
+    links: ["Music Ministry", "Media Ministry", "Kingdom Explorers", "Hospitality"],
+  },
+  {
+    title: "Leadership",
+    links: [
+      "Drs. Samuel & Rose Donkor",
+      "Rev. Dr. Ebenezer & Pastor Tosan Asamany",
+      "Pastor Chike & Gucci Agbasi",
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      "1190 Newmarket St",
+      "Ottawa, ON K1B 4L1",
+      "+1 (613) 748-7070",
+      "info@anfgcottawa.org",
+    ],
+  },
+];
+
+const footerLinks = ["Facebook", "Instagram", "YouTube"];
 
 export default function Home() {
   return (
-    <main className="church-page">
-      <header className="site-header" data-node-id="20:3">
-        <nav className="site-nav" aria-label="Primary">
-          <div className="site-nav__spacer" aria-hidden="true" />
-          <div className="site-nav__links">
-            {navLinks.map((link) => (
-              <a href={`#${link.toLowerCase().replace(/\s+/g, "-")}`} key={link}>
+    <main className="editorial-site">
+      <nav className="editorial-nav" id="home" aria-label="Primary">
+        <a className="editorial-nav__brand" href="#home">
+          ANFGC Ottawa
+        </a>
+        <div className="editorial-nav__links">
+          {navLinks.map((link) => (
+            <a href={link.href} key={link.label}>
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      <section className="hero" id="about">
+        <div className="hero__title">
+          <p className="hero__kicker">All Nations Full Gospel Church Ottawa</p>
+          <h1>
+            ALL NATIONS
+            <br />
+            -OTTAWA
+          </h1>
+        </div>
+
+        <div className="hero__intro">
+          <p className="hero__headline">A place where you will feel loved and welcomed.</p>
+          <p>
+            We welcome you to join us as we worship, grow in God&apos;s Word,
+            and serve together. There&apos;s a place for you in the family of All
+            Nations Full Gospel Church Ottawa.
+          </p>
+        </div>
+      </section>
+
+      <section className="story-grid" id="ministries">
+        {storyCards.map((card, index) => (
+          <article
+            className={`story-card story-card--${card.size} story-card--${index + 1}`}
+            key={card.title}
+          >
+            <div className="story-card__image">
+              <img src={card.image} alt="" />
+            </div>
+            <div className="story-card__content">
+              <p className="story-card__eyebrow">{card.eyebrow}</p>
+              <h2>{card.title}</h2>
+              <p className="story-card__meta">{card.meta}</p>
+              <p className="story-card__copy">{card.copy}</p>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="schedule" aria-labelledby="weekly-rhythms">
+        <h2 className="schedule__heading" id="weekly-rhythms">
+          WEEKLY RHYTHMS
+        </h2>
+
+        <div className="schedule__rows">
+          {weeklyRhythms.map((item) => (
+            <article className="schedule-row" key={`${item.day}-${item.title}`}>
+              <div className="schedule-row__day">{item.day}</div>
+              <div className="schedule-row__content">
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </div>
+              <div className="schedule-row__image">
+                <img src={item.image} alt="" />
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <a className="schedule__cta" href="#giving">
+          Ways To Give
+        </a>
+      </section>
+
+      <footer className="site-footer" id="footer">
+        <div className="site-footer__top">
+          <a className="site-footer__brand" href="#home">
+            All Nations
+          </a>
+          <div className="site-footer__top-links">
+            <a href="#weekly-rhythms">Services</a>
+            <a href="#about">About</a>
+            <a href="#footer">Find Us</a>
+          </div>
+        </div>
+
+        <div className="site-footer__columns" id="giving">
+          {ministryColumns.map((column) => (
+            <section key={column.title}>
+              <h3>{column.title}</h3>
+              <ul>
+                {column.links.map((link) => (
+                  <li key={link}>{link}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+
+        <div className="site-footer__bottom">
+          <div className="site-footer__social">
+            {footerLinks.map((link) => (
+              <a href="#footer" key={link}>
                 {link}
               </a>
             ))}
           </div>
-          <button className="site-nav__menu" type="button" aria-label="Open menu">
-            <span>Menu</span>
-            <img alt="" src={menuIcon} />
-          </button>
-        </nav>
-      </header>
-
-      <section
-        className="hero-panel"
-        data-node-id="20:27"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.985), rgba(0, 0, 0, 0.985)), url("${heroTexture}")`,
-        }}
-      >
-        <div className="hero-panel__inner">
-          <h1 className="hero-panel__title" aria-label="Easter at ANFGC Ottawa">
-            <span className="hero-panel__word hero-panel__word--gradient">EASTER</span>
-            <span className="hero-panel__subtitle">AT ANFGC OTTAWA</span>
-          </h1>
-
-          <div className="hero-panel__actions">
-            <a className="hero-button hero-button--solid" href="#service-times">
-              Register Today!
-            </a>
-            <a className="hero-button hero-button--ghost" href="#service-times">
-              Holy Week Schedule
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="service-times"
-        data-node-id="20:34"
-        id="service-times"
-        style={{
-          backgroundImage: `url("${serviceTexture}")`,
-        }}
-      >
-        <h2>Easter Weekend Service Times</h2>
-        <div className="service-times__chips">
-          {serviceTimes.map((time) => (
-            <span className="service-chip" key={time}>
-              {time}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <div className="white-spacer" data-node-id="20:43" />
-
-      <section className="verse-panel" data-node-id="20:46">
-        <div className="verse-panel__backdrop" aria-hidden="true">
-          <div className="verse-panel__shape verse-panel__shape--left" />
-          <div className="verse-panel__shape verse-panel__shape--right" />
-          <div className="verse-panel__shape verse-panel__shape--center" />
-        </div>
-        <blockquote className="verse-panel__quote">
-          Then those who went before and those who followed cried out, saying:
-          <br />
-          &quot;Hosanna! Blessed is he who comes in the name of the Lord!&quot;
-        </blockquote>
-      </section>
-
-      <section className="glitch-panel" data-node-id="40:10" aria-hidden="true">
-        <div className="glitch-panel__layer glitch-panel__layer--one" />
-        <div className="glitch-panel__layer glitch-panel__layer--two" />
-        <div className="glitch-panel__layer glitch-panel__layer--three" />
-      </section>
-
-      <section
-        className="kids-panel"
-        data-node-id="40:14"
-        style={{
-          backgroundImage: `url("${floralTexture}")`,
-        }}
-      >
-        <p>
-          Creative Kids Easter is a fun, meaningful experience designed just for
-          your kids. While you enjoy Easter service, your children will
-          experience engaging activities, age-appropriate teaching, and a safe
-          environment where they can learn the story of Easter in a way they
-          understand and enjoy. From the moment they check in, our team is ready
-          to help your kids feel welcomed, cared for, and excited to be part of
-          Easter at Creative Church.
-        </p>
-      </section>
-
-      <footer className="site-footer" data-node-id="20:61">
-        <div
-          className="site-footer__utility"
-          style={{ backgroundImage: `url("${footerTexture}")` }}
-        >
-          {footerUtilityLinks.map((link) => (
-            <a href={`#${link.toLowerCase().replace(/\s+/g, "-")}`} key={link}>
-              {link}
-            </a>
-          ))}
-        </div>
-
-        <div
-          className="site-footer__main"
-          style={{ backgroundImage: `url("${footerPanelTexture}")` }}
-        >
-          <div className="site-footer__socials" aria-label="Social media">
-            <a href="#" aria-label="Instagram">
-              <img alt="" src={instagramIcon} />
-            </a>
-            <a href="#" aria-label="Facebook">
-              <img alt="" src={facebookIcon} />
-            </a>
-            <a href="#" aria-label="YouTube">
-              <img alt="" src={youtubeIcon} />
-            </a>
-          </div>
-
-          <div className="site-footer__columns">
-            {footerColumns.map((column) => (
-              <section key={column.title}>
-                <h3>{column.title}</h3>
-                <ul>
-                  {column.links.map((link) => (
-                    <li key={link}>
-                      <a href="#">{link}</a>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        </div>
-
-        <div
-          className="site-footer__bar"
-          style={{
-            backgroundImage: `linear-gradient(202deg, rgb(228, 65, 43) 0%, rgb(247, 148, 30) 100%), url("${footerTexture}")`,
-          }}
-        >
-          <p>13000 63rd Avenue N, Maple Grove, MN 55369 | (763) 392-4383</p>
           <p>
-            &copy; 2024 Creative Church. All Rights Reserved |{" "}
-            <a href="#">Privacy Policy</a>
+            All Nations Full Gospel Church Ottawa | A caring community raising
+            disciples of Jesus Christ
           </p>
         </div>
       </footer>
