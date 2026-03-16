@@ -1,220 +1,326 @@
-const artistCards = [
-  { title: "Artist 2026", variant: "artist-card--question" },
-  { title: "Salebarbes", variant: "artist-card--stage" },
-  { title: "Papa Roach", variant: "artist-card--sunset" },
-  { title: "Artist 2026", variant: "artist-card--question" },
-  { title: "The Offspring", variant: "artist-card--night" },
-  { title: "Artist 2026", variant: "artist-card--question" },
+const navigationLinks = [
+  "Home",
+  "Giving",
+  "Ways To Give",
+  "Ministries",
+  "Music",
+  "Media",
+  "All Ministries",
+  "More About Us",
+  "About Us",
+  "Contact Us",
 ];
 
-const faqItems = [
+const focusAreas = [
   {
-    title: "Info festivaliers",
-    copy: "Parking, launch windows, accessibility access, and entry timing.",
-    open: true,
+    title: "Pray",
+    copy: "Join us in daily morning prayers, Friday night encounters, and monthly prayer sessions.",
   },
   {
-    title: "Info bénévoles",
-    copy: "Volunteer call times, zone captains, and shift rotations.",
+    title: "Learn",
+    copy: "Grow through Bible studies, teachings, and messages that strengthen faith and equip believers.",
   },
   {
-    title: "Lieux et scènes",
-    copy: "Site landmarks, family spaces, food alley, and main stage routing.",
+    title: "Serve",
+    copy: "Members serve through music, ushering, media, children's ministry, and hospitality.",
   },
   {
-    title: "Foire aux questions",
-    copy: "Weather policy, bag guidance, re-entry, and kid-friendly recommendations.",
+    title: "Join Us",
+    copy: "Everyone is welcome to worship, grow, and serve together in the church community.",
   },
 ];
 
-const promoCards = [
+const ministries = [
   {
-    title: "Collector poster",
-    copy: "Glow-night print",
-    variant: "promo-card--tilt-left",
+    title: "Music Ministry",
+    copy: "The Music Ministry helps prepare hearts to encounter God through praise and worship.",
+    items: ["Singing", "Instruments", "Sound support", "Worship teams"],
   },
   {
-    title: "Daily guide",
-    copy: "Mini itinerary deck",
-    variant: "promo-card--center",
+    title: "Media Ministry",
+    copy: "The media team spreads the gospel beyond the church walls using sound, video, photography, and broadcast media.",
+    items: ["Sound", "Video", "Photography", "Broadcast media"],
   },
   {
-    title: "Kids pack",
-    copy: "Games and stickers",
-    variant: "promo-card--tilt-right",
+    title: "Kingdom Explorers",
+    copy: "A children's ministry dedicated to nurturing kids in the knowledge and love of Jesus Christ.",
+    items: ["Age-appropriate teaching", "Activities", "Faith formation", "Safe care"],
   },
 ];
+
+const leadership = [
+  "Drs. Samuel & Rose Donkor — Senior Pastors & Founders",
+  "Rev. Dr. Ebenezer & Pastor Tosan Asamany — Resident Pastors, ANFGC Ottawa",
+  "Pastor Chike & Gucci Agbasi — Pastors, Connect Ottawa",
+];
+
+const mandates = [
+  "Creating a Spiritual Family",
+  "Providing a Place of Worship",
+  "A House of Prayer",
+  "Raising Leaders",
+  "Church Planting",
+];
+
+const services = [
+  {
+    day: "Wednesday",
+    items: ["Bible Study — 6:30–8:30 PM"],
+  },
+  {
+    day: "Friday",
+    items: ["Night Prayers — 9:00 PM"],
+  },
+  {
+    day: "Sunday",
+    items: [
+      "Celebration Service — 9:00–11:00 AM",
+      "Connect Service — 11:30 AM–1:30 PM",
+      "Evening Service — 6:30–8:30 PM",
+    ],
+  },
+];
+
+const footerLinks = ["Facebook", "Instagram", "YouTube"];
 
 export default function Home() {
   return (
-    <main className="page-shell" id="top">
+    <main className="site-shell" id="top">
       <header className="hero">
         <div className="hero__glow hero__glow--left" />
         <div className="hero__glow hero__glow--right" />
         <div className="hero__beam hero__beam--coral" />
         <div className="hero__beam hero__beam--amber" />
-        <div className="hero__cube" />
-        <div className="hero__balloon" />
 
         <nav className="topbar" aria-label="Primary">
-          <span className="topbar__brand">Festivent</span>
+          <span className="topbar__brand">All Nations Full Gospel Church Ottawa</span>
           <div className="topbar__links">
-            <a href="#artists">Artists</a>
-            <a href="#activities">Activities</a>
-            <a href="#tickets">Tickets</a>
+            {navigationLinks.map((link) => (
+              <a href={`#${link.toLowerCase().replace(/\s+/g, "-")}`} key={link}>
+                {link}
+              </a>
+            ))}
           </div>
         </nav>
 
-        <div className="hero__content">
-          <p className="eyebrow">Summer air show, recast for Easter</p>
-          <h1>Festivent</h1>
+        <section className="hero__content" id="home">
+          <p className="eyebrow">Welcome Home</p>
+          <h1>A place where you will feel loved and welcomed.</h1>
           <p className="hero__subhead">
-            A bold one-page festival concept pulled from the provided Figma
-            artboard and translated into a Next.js landing page.
+            We welcome you to join us as we worship, grow in God&apos;s Word, and
+            serve together. There&apos;s a place for you in the family of All
+            Nations Full Gospel Church Ottawa.
           </p>
           <div className="hero__actions">
-            <a className="pill pill--solid" href="#tickets">
-              Get tickets
+            <a className="pill pill--solid" href="#service-schedule">
+              Join Us This Week
             </a>
-            <a className="pill pill--ghost" href="#artists">
-              View lineup
+            <a className="pill pill--ghost" href="#ways-to-give">
+              Ways To Give
             </a>
           </div>
-        </div>
+        </section>
 
-        <div className="hero__poster">
-          <div className="hero__poster-image" />
-          <div className="hero__poster-copy">
-            <span className="poster__label">Nights under the envelope glow</span>
-            <strong>Live sets, food alleys, family rides.</strong>
+        <section className="hero__card">
+          <div>
+            <span className="hero__card-label">Our Vision</span>
+            <strong>
+              To reach the nations of the world with the gospel through church
+              planting.
+            </strong>
+            <p>Matthew 28:18-20</p>
           </div>
-        </div>
+          <div>
+            <span className="hero__card-label">Our Mission</span>
+            <strong>Raising Disciples of Jesus Christ</strong>
+            <p>
+              We are a caring global ministry of believers, equipping people to
+              reach their God-given potential.
+            </p>
+          </div>
+        </section>
       </header>
 
-      <section className="panel panel--cream" id="artists">
+      <section className="panel panel--cream" id="more-about-us">
         <div className="section-heading">
-          <span className="section-heading__badge">Premiers artistes 2026</span>
-          <h2>First artists announced</h2>
+          <span className="section-heading__badge">Vision And Mission</span>
+          <h2>Raising disciples and reaching the nations</h2>
         </div>
 
-        <div className="artist-grid">
-          {artistCards.map((artist) => (
-            <article className={`artist-card ${artist.variant}`} key={artist.title + artist.variant}>
-              <div className="artist-card__art" />
-              <h3>{artist.title}</h3>
-            </article>
-          ))}
-        </div>
-
-        <a className="link-row" href="#tickets">
-          See the full schedule
-        </a>
-      </section>
-
-      <section className="panel panel--navy" id="activities">
-        <div className="section-heading section-heading--light">
-          <span className="section-heading__badge">
-            Activités pour petits et grands
-          </span>
-          <h2>Built like a festival map</h2>
-        </div>
-
-        <div className="activity-stack">
-          <article className="feature-card feature-card--blue">
-            <div>
-              <p className="feature-card__kicker">Programme</p>
-              <h3>Family lineup</h3>
-            </div>
+        <div className="split-grid">
+          <article className="info-card">
+            <h3>Our Vision</h3>
             <p>
-              Morning launches, balloon glow, food trucks, and afternoon
-              workshops arranged as quick-scanning content blocks.
+              To reach the nations of the world with the gospel through church
+              planting.
             </p>
+            <p className="muted-copy">(Matthew 28:18-20)</p>
           </article>
 
-          <article className="feature-card feature-card--orange">
-            <div>
-              <p className="feature-card__kicker">On-site</p>
-              <h3>Info kiosk</h3>
-            </div>
-            <ul className="mini-list">
-              <li>Queue-free gate timing</li>
-              <li>Balloon launch windows</li>
-              <li>Family route recommendations</li>
+          <article className="info-card">
+            <h3>Our Mission</h3>
+            <p>
+              All Nations Full Gospel Church is a global ministry with a mandate
+              to be a caring community of believers, raising disciples of Jesus
+              Christ.
+            </p>
+            <ul className="mini-list mini-list--dark">
+              <li>Winning the lost</li>
+              <li>Consolidating believers</li>
+              <li>Empowering people to reach their God-given potential</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section className="panel panel--sky" id="visit">
-        <div className="section-heading">
-          <span className="section-heading__badge">Prépare ta visite</span>
-          <h2>Plan the day before the wind changes</h2>
+      <section className="panel panel--navy" id="ministries">
+        <div className="section-heading section-heading--light">
+          <span className="section-heading__badge">Core Church Focus</span>
+          <h2>Worship, grow, and serve together</h2>
         </div>
 
-        <div className="prep-layout">
-          <div className="prep-visual">
-            <div className="prep-visual__balloon prep-visual__balloon--one" />
-            <div className="prep-visual__balloon prep-visual__balloon--two" />
-            <div className="prep-visual__ticket">Festival map 2025</div>
-          </div>
-
-          <div className="prep-faq">
-            {faqItems.map((item) => (
-              <details key={item.title} open={item.open}>
-                <summary>{item.title}</summary>
-                <p>{item.copy}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="panel panel--cream panel--promo">
-        <div className="promo-copy">
-          <span className="section-heading__badge">
-            Pour un vent de fraîcheur dans ton quotidien
-          </span>
-          <h2>Merch, maps, and memory hooks</h2>
-          <p>
-            The original design uses overlapping product moments. This version
-            mirrors that rhythm with layered promo cards and warm shadows.
-          </p>
-        </div>
-
-        <div className="promo-shelf">
-          {promoCards.map((card) => (
-            <article className={`promo-card ${card.variant}`} key={card.title}>
-              <strong>{card.title}</strong>
-              <span>{card.copy}</span>
+        <div className="card-grid card-grid--four">
+          {focusAreas.map((area) => (
+            <article className="feature-card feature-card--blue" key={area.title}>
+              <div>
+                <p className="feature-card__kicker">Church Life</p>
+                <h3>{area.title}</h3>
+              </div>
+              <p>{area.copy}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="panel panel--deep" id="tickets">
-        <div className="ticket-banner">
-          <div>
-            <span className="section-heading__badge section-heading__badge--sky">
-              Rejoins la fête
-            </span>
-            <h2>Take the blue-hour ticket lane</h2>
-          </div>
-          <a className="pill pill--solid pill--light" href="#top">
-            Reserve now
-          </a>
+      <section className="panel panel--sky" id="all-ministries">
+        <div className="section-heading">
+          <span className="section-heading__badge">Main Ministries</span>
+          <h2>Serve with your gifts</h2>
+        </div>
+
+        <div className="card-grid">
+          {ministries.map((ministry) => (
+            <article className="info-card info-card--sky" key={ministry.title}>
+              <h3>{ministry.title}</h3>
+              <p>{ministry.copy}</p>
+              <ul className="mini-list mini-list--dark">
+                {ministry.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
 
-      <footer className="footer">
+      <section className="panel panel--cream" id="media">
+        <div className="section-heading">
+          <span className="section-heading__badge">Latest Sermon And Events</span>
+          <h2>What is happening now</h2>
+        </div>
+
+        <div className="split-grid">
+          <article className="promo-card promo-card--warm">
+            <strong>Latest Sermon</strong>
+            <span>Enlargement Through Service II</span>
+            <p>Users can stream sermons online and revisit teachings anytime.</p>
+          </article>
+
+          <article className="promo-card promo-card--deep">
+            <strong>Featured Event</strong>
+            <span>Soaring With The Spirit</span>
+            <p>January 1 - January 12</p>
+            <p>
+              A twelve-day prayer program focused on spiritual renewal and
+              direction, with daily prayer sessions aligned to calendar dates.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="panel panel--cream panel--soft" id="about-us">
+        <div className="section-heading">
+          <span className="section-heading__badge">Leadership And Mandate</span>
+          <h2>Guided by spiritual family and church planting</h2>
+        </div>
+
+        <div className="split-grid">
+          <article className="info-card">
+            <h3>Senior Leadership</h3>
+            <ul className="stack-list">
+              {leadership.map((leader) => (
+                <li key={leader}>{leader}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="info-card">
+            <h3>Core Mandate</h3>
+            <ul className="stack-list">
+              {mandates.map((mandate) => (
+                <li key={mandate}>{mandate}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="panel panel--deep" id="service-schedule">
+        <div className="section-heading section-heading--light">
+          <span className="section-heading__badge section-heading__badge--sky">
+            Service Schedule
+          </span>
+          <h2>Weekly worship rhythm</h2>
+        </div>
+
+        <div className="split-grid split-grid--tight">
+          <article className="feature-card feature-card--blue">
+            <div>
+              <p className="feature-card__kicker">Weekly Services</p>
+              <h3>Gather with us</h3>
+            </div>
+            <div className="schedule-list">
+              {services.map((service) => (
+                <div key={service.day}>
+                  <strong>{service.day}</strong>
+                  <ul className="mini-list">
+                    {service.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article className="feature-card feature-card--orange" id="ways-to-give">
+            <div>
+              <p className="feature-card__kicker">Giving And Contact</p>
+              <h3>Stay connected</h3>
+            </div>
+            <ul className="stack-list stack-list--light">
+              <li>Pushpay App</li>
+              <li>Online giving through the church website</li>
+              <li>1190 Newmarket St, Ottawa, ON K1B 4L1</li>
+              <li>+1 (613) 748-7070</li>
+              <li>info@anfgcottawa.org</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer className="footer" id="contact-us">
         <div className="footer__content">
           <div>
-            <p className="footer__eyebrow">Pour tout savoir sur le festival</p>
-            <h2>Simple footer, loud color blocking.</h2>
+            <p className="footer__eyebrow">All Nations Full Gospel Church Ottawa</p>
+            <h2>Worship, grow, and serve with us.</h2>
           </div>
           <div className="footer__links">
-            <a href="#artists">Lineup</a>
-            <a href="#visit">Visitor info</a>
-            <a href="#tickets">Billetterie</a>
+            {footerLinks.map((link) => (
+              <a href={`#${link.toLowerCase()}`} key={link}>
+                {link}
+              </a>
+            ))}
           </div>
         </div>
       </footer>
