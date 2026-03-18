@@ -252,7 +252,6 @@ export default function Home() {
             All Nations
           </a>
           <div className="site-footer__top-links">
-            <a href="#easter-week">Services</a>
             <a href={aboutUrl}>About</a>
             <a href={contactUrl}>Find Us</a>
           </div>
