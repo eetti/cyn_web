@@ -1,123 +1,179 @@
+const aboutUrl = "https://anfgcottawa.org/about-us/";
+const givingUrl =
+  "https://anfgcottawa.org/campaigns/help-families-today-with-critical-relief/";
+const contactUrl = "https://anfgcottawa.org/contacts/";
+const ministriesUrl = "https://anfgcottawa.org/ministries/";
+const musicUrl = "https://anfgcottawa.org/ministry/music/";
+const mediaUrl = "https://anfgcottawa.org/ministry/media/";
+const kingdomExplorersUrl =
+  "https://anfgcottawa.org/ministry/kingdom-explorers-kids/";
+
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Giving", href: "#giving" },
-  { label: "Ministries", href: "#ministries" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#footer" },
+  { label: "Giving", href: givingUrl },
+  { label: "Ministries", href: ministriesUrl },
+  { label: "About", href: aboutUrl },
+  { label: "Contact", href: contactUrl },
 ];
 
-const storyCards = [
+const featureCards = [
   {
-    size: "small",
+    variant: "vision",
     eyebrow: "Our Vision",
     title: "Reach the nations of the world with the gospel through church planting.",
     meta: "Matthew 28:18-20",
     copy: "A place where everyone can worship, grow, and be sent.",
-    image: "https://www.figma.com/api/mcp/asset/796aefa3-cc24-44b1-90fe-6baa211cb713",
+    image: "https://www.figma.com/api/mcp/asset/c0816dd9-9e6c-48c0-9075-04a9c9b1224b",
   },
   {
-    size: "large",
+    variant: "mission",
     eyebrow: "Our Mission",
     title: "Raising Disciples of Jesus Christ",
     meta: "Winning the lost. Consolidating believers. Empowering people.",
     copy:
       "All Nations Full Gospel Church is a caring global ministry of believers, raising disciples of Jesus Christ and helping people reach their God-given potential.",
-    image: "https://www.figma.com/api/mcp/asset/b1ef1a31-4cd2-4686-8988-85c11226ac4f",
+    image: "https://www.figma.com/api/mcp/asset/a3b39e69-776a-4a27-9c34-28b9b10604d2",
   },
   {
-    size: "large",
-    eyebrow: "Core Church Focus",
+    variant: "focus",
+    eyebrow: "Pray, Learn, Serve. Join Us.",
     title: "Pray. Learn. Serve. Join Us.",
-    meta: "Daily morning prayers, Friday night encounters, Bible studies, and practical service.",
+    meta:
+      "Daily morning prayers, Friday night encounters, Bible studies, and practical service.",
     copy:
       "Members serve in music, ushering, media, children's ministry, and hospitality while the whole church grows together in the Word.",
-    image: "https://www.figma.com/api/mcp/asset/3cfd2eb0-20f4-45b3-9e61-0fc39f174c3e",
+    image: "https://www.figma.com/api/mcp/asset/731557f3-27c4-4af4-a714-38bcd5c53429",
   },
   {
-    size: "small",
-    eyebrow: "Latest Message And Event",
-    title: "Enlargement Through Service II",
-    meta: "Soaring With The Spirit · January 1 - January 12",
+    variant: "easter",
+    eyebrow: "He Is Risen!",
+    title: "Join Us For Easter",
+    meta: "Soaring With The Spirit · January 1-12",
     copy:
       "Stream sermons online and join the twelve-day prayer program focused on spiritual renewal and direction.",
-    image: "https://www.figma.com/api/mcp/asset/646a71bc-2f4c-4343-af59-48cb10c69d97",
+    image: "https://www.figma.com/api/mcp/asset/e2cdfc57-0b35-4129-bd34-959ec88b330e",
   },
 ];
 
-const weeklyRhythms = [
+const bannerImage =
+  "https://www.figma.com/api/mcp/asset/d7fc071e-9dc4-452e-acb4-5557390f34ab";
+
+const easterRows = [
   {
-    day: "Wednesday",
-    title: "Bible Study",
-    detail:
-      "6:30-8:30 PM · Join Bible studies, teachings, and messages that strengthen faith and equip believers.",
-    image: "https://www.figma.com/api/mcp/asset/658559fb-d446-4f7a-bc00-6086006f2800",
+    day: "April 1-3",
+    title: "3 Nights Of Healing",
+    copy:
+      "Join us for three powerful nights dedicated to prayer, worship, and healing. Come expecting God to move as we seek His presence and believe for restoration spiritually, emotionally, and physically. These evenings are designed to strengthen faith, bring hope, and create space for personal encounters with God.",
+    image: "https://www.figma.com/api/mcp/asset/121a5151-00a6-4e7c-a89d-ec9843405b06",
   },
   {
-    day: "Friday",
-    title: "Night Prayers",
-    detail:
-      "9:00 PM · Gather for Friday night encounters and monthly prayer sessions as a house of prayer for all nations.",
-    image: "https://www.figma.com/api/mcp/asset/ef8b9a4d-809c-4200-b53b-beec7d98fbf6",
+    day: "April 3 10AM",
+    title: "Good Friday",
+    copy:
+      "Good Friday is a sacred moment where we remember the sacrifice of Jesus Christ on the cross. Through worship, reflection, and the Word, we honor the price that was paid for our redemption and celebrate the love that changed the world.",
+    image: "https://www.figma.com/api/mcp/asset/297a90f1-835d-456f-be0c-874ea3d90c17",
   },
   {
-    day: "Sunday",
-    title: "Celebration + Connect Service",
-    detail:
-      "9:00-11:00 AM and 11:30 AM-1:30 PM · A spiritual family where everyone feels loved, welcomed, and accepted.",
-    image: "https://www.figma.com/api/mcp/asset/4d7ec4c1-1dc5-447f-8ea7-bcf545e9fdbd",
+    day: "April 5",
+    title: "Easter Sunday",
+    copy:
+      "Celebrate the joy of the resurrection with us! Easter Sunday is a powerful reminder that Jesus conquered death and brings new life to all who believe. Join us for a vibrant service filled with worship, hope, and the message of resurrection power.",
+    image: "https://www.figma.com/api/mcp/asset/b73e7116-4609-4c59-91a9-8ab6a71c5c4e",
   },
   {
-    day: "Sunday",
-    title: "Evening Service + Church Planting Vision",
-    detail:
-      "6:30-8:30 PM · Worship, leadership training, and a mandate to keep expanding through new churches globally.",
-    image: "https://www.figma.com/api/mcp/asset/a12440a9-1861-45c1-84e5-8e3503a0f943",
+    day: "April 5",
+    title: "ALIVE Concert II",
+    copy:
+      "Experience a powerful night of music, drama, and storytelling as the Easter story comes to life on stage. ALIVE is an unforgettable production that captures the moment history changed forever, the resurrection of Jesus. Come and witness the night that changed everything.",
+    image: "https://www.figma.com/api/mcp/asset/8340502a-ebb8-45f5-a4e4-524e2af6784a",
   },
 ];
 
-const ministryColumns = [
+const footerColumns = [
   {
     title: "Ways To Give",
-    links: ["Pushpay App", "Online Giving", "Church Website Giving Link"],
+    href: givingUrl,
+    links: [
+      { label: "Pushpay App", href: givingUrl },
+      { label: "Online Giving", href: givingUrl },
+      { label: "Church Website Giving Link", href: givingUrl },
+    ],
   },
   {
     title: "Main Ministries",
-    links: ["Music Ministry", "Media Ministry", "Kingdom Explorers", "Hospitality"],
+    href: ministriesUrl,
+    links: [
+      { label: "Music Ministry", href: musicUrl },
+      { label: "Media Ministry", href: mediaUrl },
+      { label: "Kingdom Explorers", href: kingdomExplorersUrl },
+      { label: "Hospitality", href: ministriesUrl },
+    ],
   },
   {
     title: "Leadership",
+    href: aboutUrl,
     links: [
-      "Drs. Samuel & Rose Donkor",
-      "Rev. Dr. Ebenezer & Pastor Tosan Asamany",
-      "Pastor Chike & Gucci Agbasi",
+      { label: "Drs. Samuel & Rose Donkor", href: aboutUrl },
+      { label: "Rev. Dr. Ebenezer & Pastor Tosan Asamany", href: aboutUrl },
+      { label: "Pastor Chike & Gucci Agbasi", href: aboutUrl },
     ],
   },
   {
     title: "Contact",
+    href: contactUrl,
     links: [
-      "1190 Newmarket St",
-      "Ottawa, ON K1B 4L1",
-      "+1 (613) 748-7070",
-      "info@anfgcottawa.org",
+      { label: "1190 Newmarket St", href: contactUrl },
+      { label: "Ottawa, ON K1B 4L1", href: contactUrl },
+      { label: "+1 (613) 748-7070", href: contactUrl },
+      { label: "info@anfgcottawa.org", href: contactUrl },
     ],
   },
 ];
 
-const footerLinks = ["Facebook", "Instagram", "YouTube"];
+const socialLinks = ["Facebook", "Instagram", "YouTube"];
 
 export default function Home() {
   return (
-    <main className="editorial-site">
-      <nav className="editorial-nav" id="home" aria-label="Primary">
-        <a className="editorial-nav__brand" href="#home">
+    <main className="easter-site">
+      <nav className="site-nav" id="home" aria-label="Primary">
+        <a className="site-nav__brand" href="#home">
           ANFGC Ottawa
         </a>
-        <div className="editorial-nav__links">
-          {navLinks.map((link) => (
-            <a href={link.href} key={link.label}>
-              {link.label}
-            </a>
-          ))}
+
+        <div className="site-nav__actions">
+          <div className="site-nav__links">
+            {navLinks.map((link) => (
+              <a href={link.href} key={link.label}>
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <details className="site-drawer">
+            <summary className="site-drawer__toggle">
+              <span>Menu</span>
+              <span className="site-drawer__bars" aria-hidden="true" />
+            </summary>
+
+            <div className="site-drawer__overlay" aria-hidden="true" />
+
+            <div className="site-drawer__panel">
+              <p className="site-drawer__eyebrow">Navigate</p>
+              <nav className="site-drawer__links" aria-label="Mobile primary">
+                {navLinks.map((link) => (
+                  <a href={link.href} key={link.label}>
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+
+              <div className="site-drawer__meta">
+                <p>1190 Newmarket St, Ottawa, ON K1B 4L1</p>
+                <p>+1 (613) 748-7070</p>
+                <p>info@anfgcottawa.org</p>
+              </div>
+            </div>
+          </details>
         </div>
       </nav>
 
@@ -141,46 +197,51 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="story-grid" id="ministries">
-        {storyCards.map((card, index) => (
-          <article
-            className={`story-card story-card--${card.size} story-card--${index + 1}`}
-            key={card.title}
-          >
-            <div className="story-card__image">
+      <section className="feature-grid" id="ministries">
+        {featureCards.map((card) => (
+          <article className={`feature-card feature-card--${card.variant}`} key={card.title}>
+            <div className="feature-card__image">
               <img src={card.image} alt="" />
             </div>
-            <div className="story-card__content">
-              <p className="story-card__eyebrow">{card.eyebrow}</p>
+            <div className="feature-card__content">
+              <p className="feature-card__eyebrow">{card.eyebrow}</p>
               <h2>{card.title}</h2>
-              <p className="story-card__meta">{card.meta}</p>
-              <p className="story-card__copy">{card.copy}</p>
+              <p className="feature-card__meta">{card.meta}</p>
+              <p className="feature-card__copy">{card.copy}</p>
             </div>
           </article>
         ))}
       </section>
 
-      <section className="schedule" aria-labelledby="weekly-rhythms">
-        <h2 className="schedule__heading" id="weekly-rhythms">
-          WEEKLY RHYTHMS
+      <section
+        className="palm-banner"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `linear-gradient(rgba(18, 44, 15, 0.18), rgba(18, 44, 15, 0.18)), url(${bannerImage})`,
+        }}
+      />
+
+      <section className="schedule" aria-labelledby="easter-week">
+        <h2 className="schedule__heading" id="easter-week">
+          Easter At ANFGC Ottawa
         </h2>
 
         <div className="schedule__rows">
-          {weeklyRhythms.map((item) => (
-            <article className="schedule-row" key={`${item.day}-${item.title}`}>
-              <div className="schedule-row__day">{item.day}</div>
+          {easterRows.map((row) => (
+            <article className="schedule-row" key={`${row.day}-${row.title}`}>
+              <div className="schedule-row__day">{row.day}</div>
               <div className="schedule-row__content">
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
+                <h3>{row.title}</h3>
+                <p>{row.copy}</p>
               </div>
               <div className="schedule-row__image">
-                <img src={item.image} alt="" />
+                <img src={row.image} alt="" />
               </div>
             </article>
           ))}
         </div>
 
-        <a className="schedule__cta" href="#giving">
+        <a className="schedule__cta" href={givingUrl}>
           Ways To Give
         </a>
       </section>
@@ -191,19 +252,23 @@ export default function Home() {
             All Nations
           </a>
           <div className="site-footer__top-links">
-            <a href="#weekly-rhythms">Services</a>
-            <a href="#about">About</a>
-            <a href="#footer">Find Us</a>
+            <a href="#easter-week">Services</a>
+            <a href={aboutUrl}>About</a>
+            <a href={contactUrl}>Find Us</a>
           </div>
         </div>
 
         <div className="site-footer__columns" id="giving">
-          {ministryColumns.map((column) => (
+          {footerColumns.map((column) => (
             <section key={column.title}>
-              <h3>{column.title}</h3>
+              <h3>
+                {column.href ? <a href={column.href}>{column.title}</a> : column.title}
+              </h3>
               <ul>
                 {column.links.map((link) => (
-                  <li key={link}>{link}</li>
+                  <li key={link.label}>
+                    <a href={link.href}>{link.label}</a>
+                  </li>
                 ))}
               </ul>
             </section>
@@ -212,7 +277,7 @@ export default function Home() {
 
         <div className="site-footer__bottom">
           <div className="site-footer__social">
-            {footerLinks.map((link) => (
+            {socialLinks.map((link) => (
               <a href="#footer" key={link}>
                 {link}
               </a>
