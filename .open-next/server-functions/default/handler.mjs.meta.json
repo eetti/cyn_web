@@ -3591,13 +3591,13 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js": {
-      "bytes": 5310,
+    ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js": {
+      "bytes": 5272,
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js": {
-      "bytes": 5272,
+    ".open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js": {
+      "bytes": 5310,
       "imports": [],
       "format": "cjs"
     },
@@ -3630,14 +3630,14 @@
           "original": "/Users/etti/dev/personal/cyn_easter/.open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js",
-          "kind": "require-call",
-          "original": "/Users/etti/dev/personal/cyn_easter/.open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js"
-        },
-        {
           "path": ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js",
           "kind": "require-call",
           "original": "/Users/etti/dev/personal/cyn_easter/.open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js",
+          "kind": "require-call",
+          "original": "/Users/etti/dev/personal/cyn_easter/.open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js"
         }
       ],
       "format": "cjs"
@@ -4235,7 +4235,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/_de4e25a4._.js": {
-      "bytes": 6544,
+      "bytes": 8836,
       "imports": [],
       "format": "cjs"
     },
@@ -6806,11 +6806,11 @@
         ".open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js": {
           "bytesInOutput": 5159
         },
-        ".open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js": {
-          "bytesInOutput": 5076
-        },
         ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js": {
           "bytesInOutput": 5028
+        },
+        ".open-next/server-functions/default/.next/server/app/_global-error/page_client-reference-manifest.js": {
+          "bytesInOutput": 5076
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.external.js": {
           "bytesInOutput": 12142
@@ -6924,7 +6924,7 @@
           "bytesInOutput": 17607
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_de4e25a4._.js": {
-          "bytesInOutput": 6686
+          "bytesInOutput": 8976
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_page_actions_39d4fc33.js": {
           "bytesInOutput": 251
@@ -7095,7 +7095,7 @@
           "bytesInOutput": 56340
         }
       },
-      "bytes": 2029847
+      "bytes": 2032137
     }
   }
 }
