@@ -46,7 +46,6 @@ img {
 
 .site-nav,
 .hero,
-.feature-grid,
 .schedule,
 .site-footer__top,
 .site-footer__columns,
@@ -67,19 +66,23 @@ img {
 }
 
 .site-nav__brand,
-.hero h1,
-.feature-card h2,
+.hero__title,
+.vision-card h2,
+.mission-card h2,
+.focus-card h2,
+.easter-card h2,
 .schedule__heading,
 .schedule-row h3,
 .site-footer__brand,
 .site-footer h3 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-weight: 400;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
   letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
 .site-nav__brand {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
   line-height: 0.92;
 }
@@ -131,6 +134,12 @@ img {
 }
 
 .site-drawer__bars::before,
+.site-drawer__bars::after,
+.site-drawer__bars {
+  background-repeat: no-repeat;
+}
+
+.site-drawer__bars::before,
 .site-drawer__bars::after {
   content: "";
   position: absolute;
@@ -141,12 +150,12 @@ img {
 }
 
 .site-drawer__bars::before {
-  top: 0.08rem;
-  box-shadow: 0 0.32rem 0 var(--ink);
+  top: 0;
+  box-shadow: 0 0.38rem 0 var(--ink);
 }
 
 .site-drawer__bars::after {
-  bottom: 0.08rem;
+  bottom: 0;
 }
 
 .site-drawer__overlay,
@@ -189,12 +198,16 @@ img {
 }
 
 .site-drawer__eyebrow,
-.feature-card__eyebrow,
-.feature-card__meta,
+.vision-card__eyebrow,
+.vision-card__meta,
+.mission-card__eyebrow,
+.mission-card__meta,
+.focus-card__eyebrow,
+.focus-card__meta,
 .schedule-row__day,
 .site-footer__top-links a,
 .site-footer__social a,
-.hero__kicker {
+.hero__headline {
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -228,36 +241,44 @@ img {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 39%);
-  gap: 1.75rem;
-  padding-top: 0.25rem;
-  padding-bottom: 1.75rem;
+  padding-top: 0.35rem;
+  padding-bottom: 2rem;
 }
 
-.hero__kicker {
-  margin: 0 0 0.3rem;
-}
-
-.hero h1 {
+.hero__title {
   margin: 0;
-  font-size: clamp(5.8rem, 14vw, 13rem);
-  line-height: 0.86;
+  font-size: clamp(4.4rem, 9vw, 8.2rem);
+  line-height: 0.88;
+  text-align: center;
+}
+
+.hero__mosaic {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.72fr) minmax(12rem, 0.9fr) minmax(18rem, 1.35fr) minmax(12rem, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.vision-card {
+  grid-column: 1;
+  grid-row: 1 / span 2;
 }
 
 .hero__intro {
+  grid-column: 2;
+  grid-row: 1;
   align-self: start;
-  padding-top: 0.35rem;
+  padding-top: 0.15rem;
 }
 
 .hero__headline {
-  margin: 0 0 0.65rem;
-  font-size: 1.35rem;
-  line-height: 1.2;
+  margin: 0 0 0.55rem;
 }
 
 .hero__intro p:last-child,
-.feature-card__copy,
+.vision-card__copy,
+.focus-card__copy,
 .schedule-row p {
   margin: 0;
   color: var(--ink);
@@ -265,108 +286,130 @@ img {
   line-height: 1.45;
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 2rem;
-}
-
-.feature-card {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.feature-card--vision {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.feature-card--mission {
+.mission-card {
   grid-column: 3 / span 2;
-  grid-row: 1;
+  grid-row: 1 / span 2;
 }
 
-.feature-card--focus {
+.risen-label {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: center;
+  color: var(--accent);
+  font-family: "Amador W01 Regular", Georgia, "Times New Roman", serif;
+  font-size: 96px;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+
+.focus-card {
   grid-column: 2 / span 2;
-  grid-row: 2;
+  grid-row: 3 / span 2;
 }
 
-.feature-card--easter {
+.easter-card {
   grid-column: 4;
-  grid-row: 2;
+  grid-row: 3 / span 2;
+  align-self: start;
 }
 
-.feature-card__image {
+.vision-card__image,
+.mission-card__image,
+.focus-card__image,
+.easter-card__image {
   overflow: hidden;
   background: #e8e4db;
 }
 
-.feature-card--vision .feature-card__image,
-.feature-card--easter .feature-card__image {
+.vision-card__image {
   aspect-ratio: 1 / 1;
 }
 
-.feature-card--mission .feature-card__image,
-.feature-card--focus .feature-card__image {
+.mission-card__image,
+.focus-card__image {
   aspect-ratio: 1 / 1;
 }
 
-.feature-card__image img {
+.easter-card__image {
+  aspect-ratio: 1 / 1;
+}
+
+.vision-card__image img,
+.mission-card__image img,
+.focus-card__image img,
+.easter-card__image img {
   height: 100%;
   object-fit: cover;
 }
 
-.feature-card__content {
+.vision-card__content,
+.mission-card__content,
+.focus-card__content,
+.easter-card__content {
   display: grid;
-  gap: 0.2rem;
 }
 
-.feature-card h2 {
+.vision-card__content {
+  gap: 0.15rem;
+  margin-top: 0.6rem;
+}
+
+.vision-card h2 {
   margin: 0;
-  font-size: clamp(2rem, 2.6vw, 3rem);
+  font-size: clamp(2.2rem, 2.3vw, 3rem);
   line-height: 0.95;
 }
 
-.feature-card__meta {
-  margin: 0.1rem 0 0;
+.vision-card__meta,
+.mission-card__meta,
+.focus-card__meta {
+  margin: 0.15rem 0 0;
   color: var(--muted);
 }
 
-.feature-card--vision h2 {
-  max-width: 10ch;
+.mission-card__content {
+  gap: 0.25rem;
+  margin-top: 0.65rem;
 }
 
-.feature-card--easter .feature-card__content {
-  gap: 0.02rem;
+.mission-card h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 2.5vw, 3rem);
+  line-height: 0.95;
 }
 
-.feature-card--easter .feature-card__eyebrow {
-  margin-bottom: -0.2rem;
-  color: var(--accent);
-  font-family: "Amador W01 Regular", Georgia, "Times New Roman", serif;
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 0.88;
-  letter-spacing: -0.03em;
-  text-transform: none;
+.focus-card__content {
+  gap: 0.2rem;
+  margin-top: 0.55rem;
 }
 
-.feature-card--easter h2 {
-  font-size: clamp(1.7rem, 2.3vw, 2.5rem);
+.focus-card h2 {
+  margin: 0;
+  font-size: clamp(2rem, 2.3vw, 2.8rem);
+  line-height: 0.95;
+}
+
+.easter-card__content {
+  margin-top: 0.65rem;
+}
+
+.easter-card h2 {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
 }
 
 .palm-banner {
-  position: relative;
-  aspect-ratio: 1878 / 1056;
-  width: 100%;
+  width: min(100%, 120rem);
   margin: 0 auto;
-  background-color: #34512a;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 0 1.25rem;
+}
+
+.palm-banner img {
+  width: 100%;
+  height: auto;
 }
 
 .schedule {
@@ -376,6 +419,7 @@ img {
 
 .schedule__heading {
   margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: clamp(4.5rem, 11vw, 11rem);
   line-height: 0.88;
 }
@@ -406,6 +450,7 @@ img {
 
 .schedule-row h3 {
   margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: clamp(1.75rem, 2vw, 2.5rem);
   line-height: 0.95;
 }
@@ -452,6 +497,7 @@ img {
 }
 
 .site-footer__brand {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
   line-height: 0.92;
 }
@@ -473,6 +519,7 @@ img {
 
 .site-footer h3 {
   margin: 0 0 0.8rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.65rem;
   line-height: 0.95;
 }
@@ -517,27 +564,27 @@ img {
   text-transform: uppercase;
 }
 
-@media (max-width: 1100px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-grid {
+@media (max-width: 1200px) {
+  .hero__mosaic {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .feature-card--vision,
-  .feature-card--mission,
-  .feature-card--focus,
-  .feature-card--easter {
+  .vision-card,
+  .hero__intro,
+  .mission-card,
+  .risen-label,
+  .focus-card,
+  .easter-card {
     grid-column: auto;
     grid-row: auto;
   }
 
-  .palm-banner {
-    min-height: 34rem;
+  .risen-label {
+    margin-top: 1rem;
   }
+}
 
+@media (max-width: 1100px) {
   .schedule-row {
     grid-template-columns: 9rem minmax(0, 1fr);
   }
@@ -560,8 +607,8 @@ img {
     display: block;
   }
 
-  .hero h1 {
-    font-size: clamp(4.8rem, 19vw, 8rem);
+  .hero__title {
+    font-size: clamp(3.3rem, 12vw, 6rem);
   }
 
   .schedule__heading {
@@ -572,13 +619,16 @@ img {
 @media (max-width: 720px) {
   .site-nav,
   .hero,
-  .feature-grid,
   .schedule,
   .site-footer__top,
   .site-footer__columns,
   .site-footer__bottom {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .palm-banner {
+    padding: 0 1rem;
   }
 
   .site-nav,
@@ -595,20 +645,19 @@ img {
     font-size: 1.7rem;
   }
 
-  .feature-grid {
+  .hero__mosaic {
     grid-template-columns: 1fr;
   }
 
-  .feature-card h2 {
+  .risen-label {
+    font-size: clamp(3.25rem, 18vw, 6rem);
+  }
+
+  .vision-card h2,
+  .mission-card h2,
+  .focus-card h2,
+  .easter-card h2 {
     font-size: 2rem;
-  }
-
-  .feature-card--vision h2 {
-    max-width: none;
-  }
-
-  .palm-banner {
-    min-height: 28rem;
   }
 
   .schedule-row {
